@@ -1,0 +1,93 @@
+Name       Null?    Type         
+---------- -------- ------------ 
+STATE_ID   NOT NULL NUMBER       
+STATE_NAME NOT NULL VARCHAR2(50) 
+Name          Null?    Type         
+------------- -------- ------------ 
+DISTRICT_ID   NOT NULL NUMBER       
+STATE_ID               NUMBER       
+DISTRICT_NAME NOT NULL VARCHAR2(50) 
+Name        Null?    Type         
+----------- -------- ------------ 
+TAHSIL_ID   NOT NULL NUMBER       
+DISTRICT_ID          NUMBER       
+TAHSIL_NAME NOT NULL VARCHAR2(50) 
+Name       Null?    Type         
+---------- -------- ------------ 
+BLOCK_ID   NOT NULL NUMBER       
+TAHSIL_ID           NUMBER       
+BLOCK_NAME NOT NULL VARCHAR2(50) 
+Name          Null?    Type          
+------------- -------- ------------- 
+SITE_ID       NOT NULL VARCHAR2(20)  
+LATITUDE               VARCHAR2(20)  
+LONGITUDE              VARCHAR2(20)  
+SITE_TYPE              VARCHAR2(50)  
+SITE_SUB_TYPE          VARCHAR2(50)  
+STATE_ID               NUMBER        
+DISTRICT_ID            NUMBER        
+TAHSIL_ID              NUMBER        
+BLOCK_ID               NUMBER        
+SITE_NAME              VARCHAR2(100) 
+AQUIFER_TYPE           VARCHAR2(50)  
+DEPTH                  NUMBER(10,2)  
+Name          Null?    Type         
+------------- -------- ------------ 
+ID            NOT NULL NUMBER       
+SITE_ID                VARCHAR2(20) 
+WLS_DATE      NOT NULL DATE         
+WLS_WTR_LEVEL          NUMBER(10,2) 
+WLS_DRY_WELL           CHAR(1)      
+
+  STATE_ID STATE_NAME                                        
+---------- --------------------------------------------------
+         1 Maharashtra                                       
+
+
+DISTRICT_ID   STATE_ID DISTRICT_NAME                                     
+----------- ---------- --------------------------------------------------
+          1          1 Ahmednagar                                        
+
+
+ TAHSIL_ID DISTRICT_ID TAHSIL_NAME                                       
+---------- ----------- --------------------------------------------------
+         1           1 Sangamner                                         
+
+
+  BLOCK_ID  TAHSIL_ID BLOCK_NAME                                        
+---------- ---------- --------------------------------------------------
+         1          1 Sangamner Block                                   
+
+
+SITE_ID              LATITUDE             LONGITUDE            SITE_TYPE                                          SITE_SUB_TYPE                                        STATE_ID DISTRICT_ID  TAHSIL_ID   BLOCK_ID SITE_NAME                                                                                            AQUIFER_TYPE                                            DEPTH
+-------------------- -------------------- -------------------- -------------------------------------------------- -------------------------------------------------- ---------- ----------- ---------- ---------- ---------------------------------------------------------------------------------------------------- -------------------------------------------------- ----------
+W192100074103001     19°21'0" N           74°10'30" E          Dug Well                                                                                                       1           1          1            Ambikhalsa                                                                                           Unconfined                                                 17
+W191640074134001     19°16'40" N          74°13'40" E          Dug Well                                                                                                       1           1          1            Bote                                                                                                 Unconfined                                                  9
+W192900074120001     19°29'0" N           74°12'0" E           Dug Well                                                                                                       1           1          1            Chandanapuri                                                                                         Unconfined                                                 23
+W193530074180001     19°35'30" N          74°18'0" E           Dug Well                                                                                                       1           1          1            Kokangaon                                                                                            Unconfined                                                 15
+W193400074131501     19°34'0" N           74°13'15" E          Dug Well                                                                                                       1           1          1            Sangamner                                                                                            Unconfined                                                 15
+W193100074151001     19°31'0" N           74°15'10" E          Dug Well                                                                                                       1           1          1            Tambhol                                                                                              Unconfined                                                 20
+
+6 rows selected. 
+
+
+        ID SITE_ID              WLS_DATE WLS_WTR_LEVEL W
+---------- -------------------- -------- ------------- -
+         1 W192100074103001     30-11-21          8.91 N
+         2 W191640074134001     30-11-21          3.81 N
+         3 W192900074120001     30-11-21           9.5 N
+         4 W193530074180001     30-11-21          2.85 N
+         5 W193400074131501     30-11-21          6.21 N
+         6 W193100074151001     30-11-21          4.81 N
+
+6 rows selected. 
+
+
+Procedure GET_WATER_DEPTH_BY_SITE compiled
+
+SP2-0158: unknown SET option "100000"
+Water Depth for Sangamner: 6.21
+
+
+PL/SQL procedure successfully completed.
+
