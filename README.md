@@ -40,11 +40,4 @@ To set up this project, follow these steps:
 3. **PL/SQL Procedure**:
    - Use the provided PL/SQL procedure to query the water depth at a given site.
 
-## Example Usage
 
-### Insert Data:
-To insert data into the `wells` table, use the following SQL:
-
-```sql
-INSERT INTO wells (site_id, latitude, longitude, site_type, site_name, aquifer_type, depth)
-VALUES ('W192100074103001', '19°21''0" N', '74°10''30" E', 'Dug Well', 'Ambikhalsa', 'Unconfined', 17);
